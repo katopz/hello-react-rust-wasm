@@ -3,7 +3,7 @@ const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
 const wasmPlugin = {
   plugin: {
-    overrideWebpackConfig: ({webpackConfig}) => {
+    overrideWebpackConfig: ({ webpackConfig }) => {
       const wasmExtensionRegExp = /\.wasm$/;
 
       // derived from here
@@ -62,14 +62,18 @@ const wasmPlugin = {
   },
 };
 
-module.exports = function({env}) {
+module.exports = function ({ env }) {
   return {
     eslint: {
       configure: {
         overrides: [
           {
             files: ['src/crate/*.js'],
-            rules: {eqeqeq: 'off', 'no-unused-vars': 'off'},
+            rules: {
+              eqeqeq: 'off',
+              'no-unused-vars': 'off',
+              'no-restricted-globals': 'off',
+            },
           },
         ],
       },
