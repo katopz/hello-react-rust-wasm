@@ -26,5 +26,5 @@ export const useRequestAnimationFrame = () => {
     return () => cancelAnimationFrame(requestRef.current)
   }, [render, isRunning])
 
-  return { setRender, setIsRunning }
+  return { setRender, isRunning, setIsRunning }
 }
