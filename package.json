@@ -4,6 +4,7 @@
   "scripts": {
     "build": "yarn --cwd web build",
     "start": "yarn --cwd web start",
+    "serve": "yarn --cwd web serve",
     "test": "run-s test:*",
     "test:crate": "cd crate; make test",
     "test:web": "yarn --cwd web test"
