@@ -28,5 +28,5 @@ Compile `.rs` to `.wasm` using `wasm-pack` then build React app using `create-re
 
 ## Note
 
-- Use `craco`.
-- `React 18` is breaking.
+- [x] Use `react-app-rewired`.
+- [x] Async.
