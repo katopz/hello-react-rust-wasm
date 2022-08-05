@@ -91,7 +91,7 @@ const App: React.FC = () => {
   const [batchSize, setBatchSize] = useState(BATCH_SIZE)
   const [processAmount, setProcessAmount] = useState(0)
 
-  const [minterConfig, setMinterConfig] = useState({ startsWith: '', batchSize: BATCH_SIZE })
+  const [minterConfig, setMinterConfig] = useState({ startsWith: 'ok', batchSize: BATCH_SIZE })
 
   const inputBatchSizeRef = useRef<any>(0)
 
@@ -141,9 +141,9 @@ const App: React.FC = () => {
     if (!inputBatchSizeRef.current.value) return
     const batchSize = inputBatchSizeRef.current.value
 
-    console.log({ startsWith: 'b', batchSize })
+    console.log({ startsWith: 'ok', batchSize })
 
-    setMinterConfig({ startsWith: 'b', batchSize })
+    setMinterConfig({ startsWith: 'ok', batchSize })
   }
 
   return (
