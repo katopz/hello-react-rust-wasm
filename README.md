@@ -25,3 +25,8 @@ Compile `.rs` to `.wasm` using `wasm-pack` then build React app using `create-re
 - [wasm-bindgen documentation](https://rustwasm.github.io/docs/wasm-bindgen/)
 - [wasm-pack documentation](https://rustwasm.github.io/docs/wasm-pack/)
 - [wasm-pack-plugin documentation](https://github.com/wasm-tool/wasm-pack-plugin)
+
+## Note
+
+- Use `craco`.
+- `React 18` is breaking.
