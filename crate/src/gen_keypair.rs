@@ -8,15 +8,15 @@ pub fn gen_keypair(target: &str, js_batch_size: JsValue) -> String {
 
     let mut remain = batch_size;
     let mut keypair = Keypair::generate(&mut OsRng::default());
-    let mut pubkey = "".to_string();
-    while remain > 0 {
-        keypair = Keypair::generate(&mut OsRng::default());
-        pubkey = bs58::encode(&keypair.public.to_bytes()).into_string();
+    let mut pubkey = bs58::encode(&keypair.public.to_bytes()).into_string();
 
-        if pubkey.starts_with(target) {
+    while remain > 0 {
+        if target.len() == 0 || pubkey.starts_with(target) {
             break;
         }
 
+        keypair = Keypair::generate(&mut OsRng::default());
+        pubkey = bs58::encode(&keypair.public.to_bytes()).into_string();
         remain = remain - 1;
     }
 
