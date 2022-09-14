@@ -21,13 +21,7 @@ pub fn greet(s: &str) {
 
 #[wasm_bindgen]
 pub async fn fetch(target: String) -> String {
-    let body =
-        reqwest::get(target)
-            .await
-            .unwrap()
-            .text()
-            .await
-            .unwrap();
+    let body = reqwest::get(target).await.unwrap().text().await.unwrap();
 
     body
 }

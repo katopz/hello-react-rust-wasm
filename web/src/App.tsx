@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     if (!mod) return
     const fire = async () => {
-      const result = await mod.fetch('https://raw.githubusercontent.com/katopz/hello-react-rust-wasm/master/package.json')
+      const result = await mod.fetch('https://raw.githubusercontent.com/katopz/hello-react-rust-wasm/master/README.md')
       setFoo(result)
     }
     fire()
